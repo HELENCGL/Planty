@@ -1,0 +1,5 @@
+/* Centrer le bouton envoyer du formulaire de contact */
+input.wpcf7-form-control.wpcf7-submit {
+    display: block;
+    margin: 0 auto;
+ }
