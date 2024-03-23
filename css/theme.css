@@ -1,17 +1,60 @@
-/* Centrer le bouton envoyer du formulaire de contact */
+/* ***************************
+Formulaire de contact et de commande
+*************************** */
+
+/* Centrer le bouton envoyer  */
 input.wpcf7-form-control.wpcf7-submit {
     display: block;
     margin: auto;
-   
- }
-/* Formulaire de commande  sur 1 colonne mode téléphone*/
+}
+
+/* **********************
+ Header
+********************** */
+
+/* Paramétrage du menu avec changement de taille et de graisse de font lors du survol */
+
+#site-navigation-wrap .dropdown-menu li a:hover {
+    font-weight: 700;
+    font-size: 13px;
+}
+
+/* Paramétrage du bouton Commande  */
+#menu-item-876 a {
+    background-color: #DC9F96;
+}
+
+#menu-item-876 a:hover {
+    background-color: #C02E44;
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+#menu-item-876 span {
+    font-weight: 400;
+    font-size: 16px;
+    color: #FFFFFF;
+}
+
+/* Suppression du cadre lors du focus des éléments du menu */
+#wrap a:focus {
+    outline: 0 !important;
+}
+
+
+
+/* **************************************
+Formulaire de commande  
+******************************** */
 
 /* Définition du conteneur taille maximale */
- #two-columns{
-	max-width:860px; 
-	margin: auto;
-        width:100%;
+#two-columns {
+    max-width: 860px;
+    margin: auto;
+    width: 100%;
 }
+
 /* Style des titres Livraison et Vos informations */
 #two-columns h2 {
     color: white;
@@ -21,26 +64,29 @@ input.wpcf7-form-control.wpcf7-submit {
     margin-bottom: 30px;
     margin-top: 30px;
 }
+
 /* Style des labels */
 #two-columns p {
     color: white;
     font-size: 16px;
     font-weight: 400;
     line-height: 24px;
-    margin:0;
+    margin: 0;
 }
 
 /* Largeur de la ligne du formulaire sur 1 colonne */
-.form-row{
-	width: 100%;
-       
+.form-row {
+    width: 100%;
+
 }
+
 /* Largeur des colonnes gauche et droite  */
-.column-half-left, .column-half-right{
-	width:100%;
+.column-half-left,
+.column-half-right {
+    width: 100%;
     float: left;
-	position: relative;	
-	
+    position: relative;
+
 }
 
 /* Style de la zone de saisie : hauteur et espacement */
@@ -48,33 +94,37 @@ input.wpcf7-form-control.wpcf7-text {
     min-height: 70px;
     margin-top: 10px;
 }
+
 /* Style de l'intervalle entre deux zones de saisie : espacement */
-.commande-separateur{
+.commande-separateur {
     height: 30px;
 }
 
 
 /**---------------- Media query ----------------**/
 /* Formulaire du 2 colonnes pour écran et tablettes */
-@media only screen and (min-width: 768px) { 
+@media only screen and (min-width: 768px) {
 
-/* Style de la colonne de gauche  */
-	.column-half-left{
-		width: 50%;
-        padding-right: 44px;       
-	}
+    /* Style de la colonne de gauche  */
+    .column-half-left {
+        width: 50%;
+        padding-right: 44px;
+    }
+
     /* Style de la colonne de droite  : c'est elle qui tracera la ligne de séparation*/
-    .column-half-right{
-		width: 50%;
+    .column-half-right {
+        width: 50%;
         padding-left: 44px;
-        border-left: 1px #FFFFFF solid;       
-	}
+        border-left: 1px #FFFFFF solid;
+    }
+
     /* Style des titres et paragraphe en plein écran (ils correspondent à la maquette) */
     #two-columns h2 {
         font-size: 30px;
         margin-top: 0px;
     }
-    #two-columns p {       
+
+    #two-columns p {
         font-size: 20px;
     }
 
