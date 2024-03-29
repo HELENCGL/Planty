@@ -115,7 +115,7 @@ Réglages divers
     width: 51px;
     height: 56px;
     font-size: 16px !important;
-    font-family: inherit !important;
+    font-family: inter !important;
     font-weight: 400 !important;
 }
 
@@ -226,6 +226,7 @@ input.wpcf7-form-control.wpcf7-text {
 
 /**---------------- Media query ----------------**/
 /* Pour taille d'écran supérieur à 768px */
+
 @media only screen and (min-width: 768px) {
 
     /* *********************
