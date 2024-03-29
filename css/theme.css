@@ -8,30 +8,36 @@ input.wpcf7-form-control.wpcf7-submit {
     margin: auto;
 }
 
-/* **********************
- Header
-********************** */
-
-/* Paramétrage du menu avec changement de taille et de graisse de font lors du survol */
-
-#site-navigation-wrap .dropdown-menu li a:hover {
-    font-weight: 700;
-    font-size: 13px;
+/* ***************************
+Réglages divers
+*************************** */
+/* Paramétrage du comportement des images de la page d'accueil lors du passage en mode mobile */
+.feuille-verte img {
+    overflow: visible !important;
 }
 
+/* **********************
+ Header : paramétrage du menu
+********************** */
+
+/* Changement de l'apparence lors du survol des liens de la classe .menu-survol (elle est associée aux liens "Nous rencontrer" et "Admin" ) */
+
+.menu-survol a:hover {
+    font-weight: 700 !important;
+    font-size: 13px !important;
+}
+
+
 /* Paramétrage du bouton Commande  */
-#menu-item-876 a {
+.menu-button a {
     background-color: #DC9F96;
 }
 
-#menu-item-876 a:hover {
+.menu-button a:hover {
     background-color: #C02E44;
-    font-weight: 400;
-    font-size: 16px;
-    color: #FFFFFF;
 }
 
-#menu-item-876 span {
+.menu-button span {
     font-weight: 400;
     font-size: 16px;
     color: #FFFFFF;
@@ -44,8 +50,125 @@ input.wpcf7-form-control.wpcf7-submit {
 
 
 
+/* *********************************
+ Selection des produits de la page Commande 
+**************************************** */
+
+.all-products {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    flex-wrap: wrap;
+
+
+}
+
+.product {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 800;
+    line-height: 24px;
+    color: white;
+    padding-top: 60px;
+
+}
+
+
+.product-image {
+    width: 192px;
+    align-items: center;
+    text-align: center;
+
+
+}
+
+.product-hover {
+    margin-top: -80px;
+
+}
+
+.product-hover-two-lines {
+    margin-top: -104px;
+
+
+}
+
+.selector {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    margin-top: 40px;
+}
+
+.product-nb .elementor-kit-61 input[type="number"] {
+    width: 51px;
+    height: 56px;
+    background-color: white;
+}
+
+
+.elementor-kit-61 input[type="number"] {
+    border-radius: 5px 0px 0px 5px !important;
+    width: 51px;
+    height: 56px;
+    font-size: 16px !important;
+    font-family: inherit !important;
+    font-weight: 400 !important;
+}
+
+.plus-minus {
+    background-color: #dc9f96;
+    color: white;
+    height: 56px;
+    width: 31px;
+    font-size: 16px;
+    font-family: Syne;
+    font-weight: 400;
+    border-radius: 0px 5px 5px 0px;
+    text-align: center;
+}
+
+
+
+.plus {
+    height: 27px;
+    border-bottom: 1px #FFFFFF solid;
+}
+
+.button-product {
+    width: 100px;
+    height: 56px;
+    background-color: #dc9f96;
+    border-radius: 5px;
+    margin-left: 10px;
+}
+
+.button-product p {
+    font-size: 16px;
+    font-weight: 400;
+    padding-top: 15px;
+    text-align: center;
+}
+
+
+
+/* Séparateur */
+
+.line-space {
+    width: 860px;
+    border-bottom: 1px #FFFFFF solid;
+
+}
+
+.space-40px {
+    height: 40px;
+}
+
 /* **************************************
-Formulaire de commande  
+Information d'identité et de livraison
 ******************************** */
 
 /* Définition du conteneur taille maximale */
@@ -102,8 +225,22 @@ input.wpcf7-form-control.wpcf7-text {
 
 
 /**---------------- Media query ----------------**/
-/* Formulaire du 2 colonnes pour écran et tablettes */
+/* Pour taille d'écran supérieur à 768px */
 @media only screen and (min-width: 768px) {
+
+    /* *********************
+    Formulaire de commande 
+    ******************************/
+    .all-products {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+
+    .product {
+        padding-top: 0px;
+
+    }
 
     /* Style de la colonne de gauche  */
     .column-half-left {
@@ -118,7 +255,7 @@ input.wpcf7-form-control.wpcf7-text {
         border-left: 1px #FFFFFF solid;
     }
 
-    /* Style des titres et paragraphe en plein écran (ils correspondent à la maquette) */
+    /* Style des titres et paragraphe en plein écran  */
     #two-columns h2 {
         font-size: 30px;
         margin-top: 0px;
