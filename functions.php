@@ -14,9 +14,9 @@ function menu_with_admin($items, $args)
 {
 
 	if (is_user_logged_in() && $args->theme_location == 'main_menu') {
-		$items .= '<li class="menu-survol"><a href="http://localhost/planty/wp-admin">Admin</a>';
+		$items .= '<li class="menu-survol"><a href="'. site_url().'/wp-admin">Admin</a>';
 	}
-	$items .= '</li><li class="menu-button"><a href="http://localhost/planty/precommande"><span>Commande</span></a></li>';
+	$items .= '</li><li class="menu-button"><a href="'.site_url().'/precommande"><span>Commande</span></a></li>';
 
 
 	return $items;
